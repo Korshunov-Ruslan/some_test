@@ -9,12 +9,12 @@ import java.time.Duration;
 public class RentPage {
     private WebDriver driver;
 
-    private By date = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
-    private By date1 = By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose суббота, 1-е октября 2022 г.']");
-    private By date2 = By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose воскресенье, 2-е октября 2022 г.']");
-    private By time = By.className("Dropdown-control");
-    private By time1 = By.xpath(".//div[@class='Dropdown-menu']/div[3]");
-    private By time2 = By.xpath(".//div[@class='Dropdown-menu']/div[5]");
+    private By dateLocator = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
+    private By dateCalendar = By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose суббота, 1-е октября 2022 г.']");
+    private By dateCalendarClos= By.xpath(".//div[@class='react-datepicker__week']/div[@aria-label='Choose воскресенье, 2-е октября 2022 г.']");
+    private By timeLocator = By.className("Dropdown-control");
+    private By timeOpen = By.xpath(".//div[@class='Dropdown-menu']/div[3]");
+    private By timeClose = By.xpath(".//div[@class='Dropdown-menu']/div[5]");
     private By colourBlack = By.id("black");
     private By colourGrey = By.id("grey");
     private By comment = By.cssSelector(".Input_InputContainer__3NykH .Input_Responsible__1jDKN");
@@ -27,20 +27,20 @@ public class RentPage {
     }
 
     public void sendFirstInfoForRentScooter() {
-        driver.findElement(date).click();
-        driver.findElement(date1).click();
-        driver.findElement(time).click();
-        driver.findElement(time1).click();
+        driver.findElement(dateLocator).click();
+        driver.findElement(dateCalendar).click();
+        driver.findElement(timeLocator).click();
+        driver.findElement(timeOpen).click();
         driver.findElement(colourBlack).click();
         driver.findElement(comment).sendKeys("позязя");
         driver.findElement(rent).click();
     }
 
     public void sendSecondInfoForRentScooter() {
-        driver.findElement(date).click();
-        driver.findElement(date1).click();
-        driver.findElement(time).click();
-        driver.findElement(time2).click();
+        driver.findElement(dateLocator).click();
+        driver.findElement(dateCalendar).click();
+        driver.findElement(timeLocator).click();
+        driver.findElement(timeClose).click();
         driver.findElement(colourGrey).click();
         driver.findElement(comment).sendKeys("");
         driver.findElement(rent).click();
