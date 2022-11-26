@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.time.Duration;
 
 public class RentPageTest {
+    public final String HOMEPAGE = "https://qa-scooter.praktikum-services.ru/";
     WebDriver driver = new FirefoxDriver();
     HomePageScooter objHomePageScooter = new HomePageScooter(driver);
     OrderPageScooter objOrderPageScooter = new OrderPageScooter(driver);
@@ -19,7 +20,7 @@ public class RentPageTest {
 
     @Before
     public void startUp() {
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(HOMEPAGE);
         objHomePageScooter.clickCookie();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
