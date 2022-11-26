@@ -1,4 +1,4 @@
-package ru.yandex.SamokatPOM;
+package ru.yandex.samokatpom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
