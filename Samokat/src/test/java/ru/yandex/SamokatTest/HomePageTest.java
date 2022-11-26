@@ -9,12 +9,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static org.junit.Assert.*;
 
 public class HomePageTest {
+    public final String HOMEPAGE = "https://qa-scooter.praktikum-services.ru/";
     WebDriver driver = new FirefoxDriver();
     HomePageScooter objHomePageScooter = new HomePageScooter(driver);
 
     @Before
     public void startUp() {
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(HOMEPAGE);
         objHomePageScooter.clickCookie();
     }
 
