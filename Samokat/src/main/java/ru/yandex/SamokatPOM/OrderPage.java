@@ -25,25 +25,5 @@ public class OrderPage {
     public void clickButtonDown() {
         driver.findElement(buttonDown).click();
     }
-
-    public void sendLoginFirstVersion() {
-        driver.findElement(name).sendKeys("Клоун");
-        driver.findElement(surname).sendKeys("Клоунов");
-        driver.findElement(address).sendKeys("Клоуна 12");
-        driver.findElement(metrostation).click();
-        driver.findElement(metrostation1).click();
-        driver.findElement(telephone).sendKeys("+79998343290");
-        driver.findElement(next).click();
-    }
-
-    public void sendLoginSecondVersion() {
-        driver.findElement(name).sendKeys("Кирилл");
-        driver.findElement(surname).sendKeys("Щекилов");
-        driver.findElement(address).sendKeys("Василина 19");
-        driver.findElement(metrostation).click();
-        driver.findElement(metrostation1).click();
-        driver.findElement(telephone).sendKeys("+79993332210");
-        driver.findElement(next).click();
-    }
 }
 }
