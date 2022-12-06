@@ -1,4 +1,4 @@
-package ru.yandex.SamokatTest;
+package ru.yandex.samokattest;
 
 import org.junit.After;
 import org.junit.Before;
