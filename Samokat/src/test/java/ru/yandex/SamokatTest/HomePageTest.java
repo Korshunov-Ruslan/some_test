@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static org.junit.Assert.*;
 
 public class HomePageTest {
-    public final String HOMEPAGE = "https://qa-scooter.praktikum-services.ru/";
+    public final static String HOMEPAGE = "https://qa-scooter.praktikum-services.ru/";
     WebDriver driver = new FirefoxDriver();
     HomePageScooter objHomePageScooter = new HomePageScooter(driver);
 
